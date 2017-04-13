@@ -102,7 +102,6 @@ class GoogleSheetApi:
                         textForAttach += str(sheetTime.day) + ' ' + GoogleSheetApi.MonthWord(checkMonth) + ' - ' + row[0] + ' - ' + row[2] +'\n'
                         
             attach=[{
-                #"fallback": u'\nДни рождения в следующем месяце:\n',
                 "text": textForAttach,
                 "color": "#7CD197"
             }]
@@ -212,8 +211,8 @@ class GoogleSheetApi:
 
 
 #Sign In
-username = '' #Here is your 
-password = ''
+username = '' #Here is your google username
+password = '' #Here is your password
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
