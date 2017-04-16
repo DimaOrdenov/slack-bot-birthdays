@@ -254,7 +254,7 @@ if (sc.rtm_connect()):
                                 sc.api_call("chat.postMessage",channel=readList[0]['channel'],text="Hi <@"+readList[0]['user']+">!",as_user="true")
                             if readList[0]['text'] == 'add me':
                                 sc.api_call("chat.postMessage",channel=readList[0]['channel'],text="Hi <@"+readList[0]['user']+">! Enter your Name and Surname:",as_user="true")
-                            if re.search(u'Name=[А-Я][а-яА-Я]+ Surname=[А-Я][а-яА-Я]+', readList[0]['text']):
+                            if re.search(u'Name=[A-Z][a-zA-Z]+ Surname=[A-Z][a-zA-Z]+', readList[0]['text']):
                                 name_str = re.search(u'Name=[А-Я][а-яА-Я]+', readList[0]['text'])
                                 surname_str = re.search(u'Surname=[А-Я][а-яА-Я]+', readList[0]['text'])
                                 #print(name.group(0))
