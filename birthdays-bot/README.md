@@ -40,4 +40,20 @@ Full documentation about API could be found [here](https://api.slack.com/). Here
 Full documentation about SlackClient library for Python could be found [here](http://slackapi.github.io/python-slackclient/).
 
 ## Some handsome comments about the code
-*Comming soon*
+`mainMonth()` - method is called to check birthdays at last day of month.
+
+`mainDaily()` - method is called to check birthdays every day.
+
+There is `try except` method in both class methods not to break code execution if some exceptions will appear.
+
+Both class methods have a little api part to get data from Sheet. After getting data, its processing to Slack API call *chat.postMessage*. Method `mainDaily` has additional work with data as it needs to be sent to different users.
+
+`MonthWord(month)` - method is called to get name of **month** (1-12).
+
+Working part starting at `if (sc.rtm_connect()):` and continues till `else` statement with it body. In this part bot connecting to team, working with current date and time. Also, there is a little registration part in `if re.search(u'Name=[А-Я][а-яА-Я]+ Surname=[А-Я][а-яА-Я]+', readList[0]['text']):` "if-statement"'s body. User can send *add me* message to bot and it will ask him to send his name and surname that must be valid to this regural expression in statement. (Of course *add me* isn't required as bot checks text of message and doesnt wait for some answer)
+
+A little registration is necessary to put all chiefs in one file. On next check bot will compare Sheet with file and send messages only to chiefs.
+
+:heavy_exclamation_mark: I've tried to use OOP to make some class with methods and work with it. I think that better realisation could be writing class and executable part separately.
+
+Also there are too many if-else statements and some "code-copies". Better get less of this.
