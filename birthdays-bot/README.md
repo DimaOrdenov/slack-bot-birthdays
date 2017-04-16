@@ -50,7 +50,7 @@ Both class methods have a little api part to get data from Sheet. After getting 
 
 `MonthWord(month)` - method is called to get name of **month** (1-12).
 
-Working part starting at `if (sc.rtm_connect()):` and continues till `else` statement with it body. In this part bot connecting to team, working with current date and time. Also, there is a little registration part in `if re.search(u'Name=[А-Я][а-яА-Я]+ Surname=[А-Я][а-яА-Я]+', readList[0]['text']):` "if-statement"'s body. User can send *add me* message to bot and it will ask him to send his name and surname that must be valid to this regural expression in statement. (Of course *add me* isn't required as bot checks text of message and doesnt wait for some answer)
+Working part starting at `if (sc.rtm_connect()):` and continues till `else` statement with it body. In this part bot connecting to team, working with current date and time. Also, there is a little registration part in `if re.search(u'Name=[A-Z][a-zA-Z]+ Surname=[A-Z][a-zA-Z]+', readList[0]['text']):` "if-statement"'s body. User can send *add me* message to bot and it will ask him to send his name and surname that must be valid to this regural expression in statement. (Of course *add me* isn't required as bot checks text of message and doesnt wait for some answer)
 
 A little registration is necessary to put all chiefs in one file. On next check bot will compare Sheet with file and send messages only to chiefs.
 
