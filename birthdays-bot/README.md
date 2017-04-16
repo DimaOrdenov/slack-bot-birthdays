@@ -57,3 +57,5 @@ A little registration is necessary to put all chiefs in one file. On next check 
 :heavy_exclamation_mark: I've tried to use OOP to make some class with methods and work with it. I think that better realisation could be writing class and executable part separately.
 
 Also there are too many if-else statements and some "code-copies". Better get less of this.
+
+The right way of making multitask bot (get messages and send answers, working on some functions with Google Sheet and more) is using something like multithreading or multiprocessing app. In this way users can use all bot's functions and advantages.
